@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Kategoriler</h1> 
+  <mat-form-field appearance="outline">
+    <input matInput placeholder="Bulmak istediğiniz kategoriyi yazınız.." (keyup)="Filtrele($event)">
+  </mat-form-field> 
+  
+  <mat-table  [dataSource]="dataSource">
+      <ng-container matColumnDef="kategori1">
+        <mat-header-cell *matHeaderCellDef> Kategoriler </mat-header-cell>
+        <mat-cell *matCellDef="let kayit"> {{kayit.kategori1}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="sorular">
+        <mat-header-cell *matHeaderCellDef> Kategoriye Ait Sorular </mat-header-cell>
+        <mat-cell *matCellDef="let kayit">
+          <button mat-raised-button color="accent" [routerLink]="['/ksorulistele', kayit.kategoriId]">Sorular</button>
+        </mat-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+</div>

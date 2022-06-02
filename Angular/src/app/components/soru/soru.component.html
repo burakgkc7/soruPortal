@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>Sorular</h1> 
+  <mat-form-field appearance="outline">
+    <input matInput placeholder="Bulmak istediğiniz soruyu yazınız.." (keyup)="Filtrele($event)">
+  </mat-form-field> 
+  <button mat-fab matTooltip="Soru Ekle" color="accent" (click)="Ekle()">
+    <mat-icon aria-label="label">add</mat-icon>
+  </button>
+  <mat-table  [dataSource]="dataSource">
+      <ng-container matColumnDef="soru1">
+        <mat-header-cell *matHeaderCellDef> Soru </mat-header-cell>
+        <mat-cell *matCellDef="let kayit"> {{kayit.soru1}} </mat-cell>
+      </ng-container>
+      
+      <ng-container matColumnDef="detay">
+        <mat-header-cell *matHeaderCellDef> Detay </mat-header-cell>
+        <mat-cell *matCellDef="let kayit">
+          <button mat-raised-button color="accent" [routerLink]="['/cevap', kayit.soruId]">Cevap</button>
+        </mat-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+</div>
+

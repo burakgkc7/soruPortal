@@ -1,0 +1,17 @@
+
+<div class="container">
+  <h1>{{secSoru.soru1}}</h1>  
+  &nbsp;
+  <button mat-fab matTooltip="Cevap Ekle" color="accent" (click)="Ekle()">
+    <mat-icon aria-label="label">add</mat-icon>
+  </button>
+  <mat-table  [dataSource]="dataSource">
+      
+      <ng-container matColumnDef="cevap1">
+        <mat-header-cell *matHeaderCellDef> Cevap </mat-header-cell>
+        <mat-cell *matCellDef="let kayit"> {{kayit.cevap1}} </mat-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+</div>

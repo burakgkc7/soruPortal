@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+  <span>{{dialogBaslik}}</span>
+</mat-toolbar>
+<div class="container">
+  <form [formGroup]="frm">
+    <mat-form-field appearance="outline">
+      <mat-label>Cevabınızı yazınız.</mat-label>
+      <input matInput placeholder="Cevabınızı buraya yazınız." formControlName="cevap1" name="cevap1" required type="text">
+    </mat-form-field>
+  </form>
+  <button mat-raised-button color="accent" (click)="dialogRef.close(frm.value)" [disabled]="frm.invalid">Cevap Ekle</button>&nbsp;
+  <button mat-raised-button color="warn" (click)="dialogRef.close()">İptal</button>
+</div>

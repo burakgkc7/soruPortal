@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+  <span>{{dialogBaslik}}</span>
+</mat-toolbar>
+<div class="container">
+  <form [formGroup]="frm">
+    <mat-form-field appearance="outline">
+      <mat-label>Sorunuz Nedir?</mat-label>
+      <input matInput placeholder="Sorunuzu buraya yazınız." formControlName="soru1" name="soru1" required type="text">
+    </mat-form-field>
+  </form>
+  <button mat-raised-button color="accent" (click)="dialogRef.close(frm.value)" [disabled]="frm.invalid">Sor</button>&nbsp;
+  <button mat-raised-button color="warn" (click)="dialogRef.close()">İptal</button>
+</div>
