@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB03ModelStoreContainer" CdmEntityContainer="DB03Entities">
+    <EntitySetMapping Name="Cevap">
+      <EntityTypeMapping TypeName="DB03Model.Cevap">
+        <MappingFragment StoreEntitySet="Cevap">
+          <ScalarProperty Name="soruId" ColumnName="soruId" />
+          <ScalarProperty Name="cevapYazar" ColumnName="cevapYazar" />
+          <ScalarProperty Name="cevap1" ColumnName="cevap" />
+          <ScalarProperty Name="cevapId" ColumnName="cevapId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kategori">
+      <EntityTypeMapping TypeName="DB03Model.Kategori">
+        <MappingFragment StoreEntitySet="Kategori">
+          <ScalarProperty Name="kategori1" ColumnName="kategori" />
+          <ScalarProperty Name="kategoriId" ColumnName="kategoriId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kullanici">
+      <EntityTypeMapping TypeName="DB03Model.Kullanici">
+        <MappingFragment StoreEntitySet="Kullanici">
+          <ScalarProperty Name="nickname" ColumnName="nickname" />
+          <ScalarProperty Name="kullanicisifre" ColumnName="kullanicisifre" />
+          <ScalarProperty Name="kullanicimail" ColumnName="kullanicimail" />
+          <ScalarProperty Name="kullanicisoyad" ColumnName="kullanicisoyad" />
+          <ScalarProperty Name="kullaiciad" ColumnName="kullaiciad" />
+          <ScalarProperty Name="kullaniciId" ColumnName="kullaniciId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Soru">
+      <EntityTypeMapping TypeName="DB03Model.Soru">
+        <MappingFragment StoreEntitySet="Soru">
+          <ScalarProperty Name="yazar" ColumnName="yazar" />
+          <ScalarProperty Name="kategori" ColumnName="kategori" />
+          <ScalarProperty Name="soru1" ColumnName="soru" />
+          <ScalarProperty Name="soruId" ColumnName="soruId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
